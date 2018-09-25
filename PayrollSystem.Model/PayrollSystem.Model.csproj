@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>244612f4-f3c2-4277-a716-311c6abe0820</ProjectGuid>
+    <ProjectGuid>{244612F4-F3C2-4277-A716-311C6ABE0820}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PayrollSystem.Model</RootNamespace>
@@ -31,24 +31,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="PaymentMethods\BankAccount.cs" />
+    <Compile Include="PaymentClassifications\CommissionedClassification.cs" />
+    <Compile Include="PaymentMethods\DirectMethod.cs" />
+    <Compile Include="PaymentMethods\EmailAdress.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="PaymentMethods\HoldMethod.cs" />
+    <Compile Include="PaymentClassifications\HourlyClassification.cs" />
+    <Compile Include="IAffiliation.cs" />
+    <Compile Include="IPaymentClassification.cs" />
+    <Compile Include="IPaymentMethod.cs" />
+    <Compile Include="PaymentMethods\MailMethod.cs" />
+    <Compile Include="Affiliations\NoAffiliation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PaymentClassifications\SalariedClassification.cs" />
+    <Compile Include="PaymentClassifications\SalesReceipt.cs" />
+    <Compile Include="Affiliations\ServiceCharge.cs" />
+    <Compile Include="PaymentClassifications\TimeCard.cs" />
+    <Compile Include="Affiliations\UnionAffiliation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
